@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Loanda — Hotel Boutique de Luxo Rústico</title>
+    <meta name="description" content="Hotel Loanda é um hotel boutique de luxo rústico em Angola, combinando o calor dos materiais nobres, conforto e autêntica hospitalidade." />
+    <meta property="og:title" content="Hotel Loanda — Hotel Boutique de Luxo Rústico" />
+    <meta property="og:description" content="Onde a alma rústica encontra o luxo contemporâneo e o acolhimento caloroso." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Pure CSS stylesheet (Vanilla CSS3, no framework) -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- ======================================================================
+         TOP BAR NAVIGATION (Top Bar Contract: 1 row, 3 zones + Language Switcher)
+         ====================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="header-container">
+        <!-- Zone 1: Wordmark -->
+        <a href="#hero" class="brand-wordmark" aria-label="Hotel Loanda Página Inicial">
+          Hotel Loanda
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav aria-label="Navegação Principal">
+          <ul class="nav-menu">
+            <li><a href="#essence" class="nav-link" data-i18n="nav_hotel">O Hotel</a></li>
+            <li><a href="#rooms" class="nav-link" data-i18n="nav_rooms">Quartos</a></li>
+            <li><a href="#amenities" class="nav-link" data-i18n="nav_amenities">Comodidades</a></li>
+            <li><a href="#dining" class="nav-link" data-i18n="nav_dining">Gastronomia</a></li>
+            <li><a href="#brunch" class="nav-link" data-i18n="nav_brunch">Brunch</a></li>
+            <li><a href="#location" class="nav-link" data-i18n="nav_location">Localização</a></li>
+          </ul>
+        </nav>
+
+        <!-- Zone 3: Direct Action & Language Switcher -->
+        <div class="header-actions">
+          <!-- Language Toggle Button: PT / EN -->
+          <div class="lang-switch" role="group" aria-label="Seleção de Idioma / Language Selector">
+            <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+            <span class="lang-sep">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button type="button" class="btn header-btn" data-open-modal="reservation" data-i18n="nav_book_btn">
+            Reservar Estadia
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu de Navegação">
+      <div class="mobile-drawer-header">
+        <a href="#hero" class="brand-wordmark mobile-nav-link" style="color: var(--color-text-main); font-size: 1.4rem;">Hotel Loanda</a>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="lang-switch" style="border-color: var(--color-border); background: var(--color-surface-card);">
+            <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+            <span class="lang-sep">|</span>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button type="button" class="mobile-drawer-close" aria-label="Fechar menu" data-close-drawer>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="mobile-menu-list">
+        <li><a href="#essence" class="mobile-nav-link" data-i18n="nav_hotel">O Hotel</a></li>
+        <li><a href="#rooms" class="mobile-nav-link" data-i18n="nav_rooms">Quartos</a></li>
+        <li><a href="#amenities" class="mobile-nav-link" data-i18n="nav_amenities">Comodidades</a></li>
+        <li><a href="#dining" class="mobile-nav-link" data-i18n="nav_dining">Gastronomia</a></li>
+        <li><a href="#brunch" class="mobile-nav-link" data-i18n="nav_brunch">Brunch</a></li>
+        <li><a href="#location" class="mobile-nav-link" data-i18n="nav_location">Localização</a></li>
+      </ul>
+
+      <div class="mobile-drawer-footer">
+        <p><strong>Hotel Loanda</strong></p>
+        <p style="font-size: 0.8125rem; color: var(--color-text-light);">Rustic Soul · Modern Luxury</p>
+        <button type="button" class="btn btn-primary" style="margin-top: 1.25rem; width: 100%;" data-open-modal="reservation" data-close-drawer data-i18n="nav_book_btn">
+          Reservar Estadia
+        </button>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         1. HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-media-wrapper">
+        <img
+          src="/assets/images/hero.jpg"
+          alt="Fachada exterior do Hotel Loanda com o Restaurante 1576 e Snack Bar em Luanda, Angola"
+          class="hero-image"
+          referrerpolicy="no-referrer"
+        />
+        <div class="hero-scrim"></div>
+      </div>
+
+      <div class="container hero-content">
+        <span class="hero-eyebrow">
+          <span data-i18n="hero_eyebrow_1">Santuário Boutique</span>
+          <span class="meta-sep">·</span>
+          <span data-i18n="hero_eyebrow_2">Luxo Rústico</span>
+          <span class="meta-sep">·</span>
+          <span data-i18n="hero_eyebrow_3">Hospitalidade</span>
+        </span>
+        <h1 class="hero-title" data-i18n="hero_title">
+          Onde a Alma Rústica Encontra o Luxo Contemporâneo.
+        </h1>
+        <p class="hero-description" data-i18n="hero_desc">
+          Um refúgio intimista em Angola, combinando o calor dos materiais nobres, conforto de excelência e a mais autêntica hospitalidade.
+        </p>
+      </div>
+
+      <!-- Integrated Quick Reservation Bar -->
+      <div class="container booking-quickbar-container">
+        <form class="booking-quickbar" id="quickbar-form">
+          <div class="booking-field">
+            <label for="qb-checkin" class="booking-field-label" data-i18n="qb_checkin">Check-in</label>
+            <input type="date" id="qb-checkin" class="booking-field-control" required />
+          </div>
+          <div class="booking-field">
+            <label for="qb-checkout" class="booking-field-label" data-i18n="qb_checkout">Check-out</label>
+            <input type="date" id="qb-checkout" class="booking-field-control" required />
+          </div>
+          <div class="booking-field">
+            <label for="qb-guests" class="booking-field-label" data-i18n="qb_guests">Hóspedes</label>
+            <select id="qb-guests" class="booking-field-control">
+              <option value="1 Guest" data-i18n="guest_1">1 Hóspede</option>
+              <option value="2 Guests" data-i18n="guest_2" selected>2 Hóspedes</option>
+              <option value="3 Guests" data-i18n="guest_3">3 Hóspedes</option>
+              <option value="4 Guests" data-i18n="guest_4">4 Hóspedes</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label for="qb-room" class="booking-field-label" data-i18n="qb_room_type">Tipo de Quarto</label>
+            <select id="qb-room" class="booking-field-control">
+              <option value="All Rooms" data-i18n="qb_all_rooms">Qualquer Quarto</option>
+              <option value="Executive">Executive</option>
+              <option value="Premium">Premium</option>
+              <option value="Premium Superior">Premium Superior</option>
+              <option value="Suite Executive Kitchenette">Suite Executive Kitchenette</option>
+              <option value="Suite Premium Kitchenette">Suite Premium Kitchenette</option>
+              <option value="Suite Master Kitchenette">Suite Master Kitchenette</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" data-i18n="qb_btn">
+            Verificar Disponibilidade
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. INTRODUCTION / THE ESSENCE
+         ====================================================================== -->
+    <section class="section-padding bg-alt" id="essence">
+      <div class="container essence-grid">
+        <div class="essence-narrative reveal-item">
+          <span class="eyebrow" data-i18n="essence_eyebrow">Hospitalidade Genuína</span>
+          <h2 data-i18n="essence_title">A Alma do Loanda</h2>
+          <p class="lead-text" data-i18n="essence_quote">
+            “Há lugares onde nos sentimos bem. E há aqueles onde nos sentimos em casa.”
+          </p>
+          <p data-i18n="essence_p1">
+            No Hotel Loanda, acreditamos que uma boa estadia começa com a sensação de estar no lugar certo. Um espaço onde o conforto se encontra com a hospitalidade, onde cada detalhe convida a ficar e onde Luanda se sente um pouco mais próxima.
+          </p>
+
+          <div class="essence-stats-list">
+            <div class="stat-item">
+              <span class="stat-number">6</span>
+              <span class="stat-label" data-i18n="essence_stat_chambers">Quartos & Suites</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label" data-i18n="essence_stat_central">Localização Central</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24h</span>
+              <span class="stat-label" data-i18n="essence_stat_service">Atendimento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="essence-visual-frame reveal-item">
+          <img
+            src="/assets/images/room_kitchenette.jpg"
+            alt="Interior acolhedor e comodidades do Hotel Loanda"
+            class="essence-image-main"
+            referrerpolicy="no-referrer"
+          />
+          <div class="essence-caption-tag">
+            <span data-i18n="essence_caption">Restaurante 1576 & Áreas de Convívio do Hotel Loanda</span>
+            <span data-i18n="essence_hours">Hotel Loanda · Luanda, Angola</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ROOMS & ACCOMMODATIONS (EXACT 3x2 GRID AS REQUESTED)
+         ====================================================================== -->
+    <section class="section-padding" id="rooms">
+      <div class="container">
+        <div class="section-header-centered reveal-item">
+          <span class="eyebrow" data-i18n="rooms_eyebrow">Acomodações</span>
+          <h2 data-i18n="rooms_title">Os Nossos Quartos & Suites</h2>
+          <p style="margin-top: 0.75rem; color: var(--color-text-body);" data-i18n="rooms_subtitle">
+            Espaços concebidos para proporcionar o mais elevado descanso, equipados com comodidades modernas e acabamentos de requinte.
+          </p>
+        </div>
+
+        <div class="rooms-grid-reference">
+          <!-- CARD 1: Executive -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/suite.jpg"
+                alt="Quarto Executive - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <!-- Capacity Badge -->
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 2</span>
+            </div>
+
+            <!-- Content Area -->
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room1_title">Executive</h3>
+              <p class="room-card-desc-ref" data-i18n="room1_desc">
+                Quarto executivo com todas as comodidades essenciais para uma estadia confortável e produtiva.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">115 500 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">128 500 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Executive"
+                  aria-label="Reservar Quarto Executive"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: Premium -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/room_premium.jpg"
+                alt="Quarto Premium com cama de casal e decoração rústica e elegante - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 2</span>
+            </div>
+
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room2_title">Premium</h3>
+              <p class="room-card-desc-ref" data-i18n="room2_desc">
+                Quarto premium com acabamentos superiores e vista privilegiada para o hotel.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">118 800 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">131 800 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Premium"
+                  aria-label="Reservar Quarto Premium"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: Premium Superior -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/suite.jpg"
+                alt="Quarto Premium Superior - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 2</span>
+            </div>
+
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room3_title">Premium Superior</h3>
+              <p class="room-card-desc-ref" data-i18n="room3_desc">
+                Quarto premium com acabamentos de excelência, luz natural e vistas privilegiadas sobre a cidade.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">122 100 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">135 100 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Premium Superior"
+                  aria-label="Reservar Quarto Premium Superior"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4: Suite Executive Kitchenette -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/room_kitchenette.jpg"
+                alt="Suite Executive Kitchenette - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 3</span>
+            </div>
+
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room4_title">Suite Executive Kitchenette</h3>
+              <p class="room-card-desc-ref" data-i18n="room4_desc">
+                Suite executiva com kitchenette totalmente equipada para estadias prolongadas.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">165 000 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">178 000 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Suite Executive Kitchenette"
+                  aria-label="Reservar Suite Executive Kitchenette"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 5: Suite Premium Kitchenette -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/room_kitchenette.jpg"
+                alt="Suite Premium Kitchenette - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 3</span>
+            </div>
+
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room5_title">Suite Premium Kitchenette</h3>
+              <p class="room-card-desc-ref" data-i18n="room5_desc">
+                Suite premium com kitchenette e espaços amplos para máximo conforto.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">176 000 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">189 000 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Suite Premium Kitchenette"
+                  aria-label="Reservar Suite Premium Kitchenette"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 6: Suite Master Kitchenette -->
+          <article class="room-card-ref reveal-item">
+            <div class="room-card-bg-wrap">
+              <img
+                src="/assets/images/suite.jpg"
+                alt="Suite Master Kitchenette - Hotel Loanda"
+                class="room-card-bg-img"
+                referrerpolicy="no-referrer"
+              />
+              <div class="room-card-scrim-ref"></div>
+            </div>
+
+            <div class="room-cap-badge">
+              <svg class="room-cap-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span><span data-i18n="max_prefix">Máx.</span> 4</span>
+            </div>
+
+            <div class="room-card-content-ref">
+              <h3 class="room-card-title-ref" data-i18n="room6_title">Suite Master Kitchenette</h3>
+              <p class="room-card-desc-ref" data-i18n="room6_desc">
+                A nossa suite mais exclusiva, com kitchenette de luxo e o mais alto nível de conforto e privacidade.
+              </p>
+
+              <div class="room-card-footer-ref">
+                <div class="room-rates-wrap">
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_ind">INDIVIDUAL</span>
+                    <span class="rate-val-ref">187 000 Kz</span>
+                  </div>
+                  <div class="room-rate-col">
+                    <span class="rate-label-ref" data-i18n="rate_dup">DUPLO</span>
+                    <span class="rate-val-ref">200 000 Kz</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="room-circle-action"
+                  data-open-modal="reservation"
+                  data-room="Suite Master Kitchenette"
+                  aria-label="Reservar Suite Master Kitchenette"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. COMODIDADES / AMENITIES
+         ====================================================================== -->
+    <section class="section-padding bg-alt" id="amenities">
+      <div class="container">
+        <div class="section-header-centered reveal-item">
+          <span class="eyebrow" data-i18n="amenities_eyebrow">Serviços & Conforto</span>
+          <h2 data-i18n="amenities_title">Comodidades do Hotel Loanda</h2>
+          <p style="margin-top: 0.75rem; color: var(--color-text-body);" data-i18n="amenities_subtitle">
+            Pensadas para garantir o máximo conforto, tranquilidade e conveniência durante a sua estadia em Luanda.
+          </p>
+        </div>
+
+        <div class="amenities-grid-luxury reveal-item">
+          <!-- 1. Wi-Fi gratuito -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_wifi_title">Wi-Fi Gratuito</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_wifi_desc">
+              Conexão de alta velocidade com cobertura total em todos os quartos, suites e áreas públicas.
+            </p>
+          </div>
+
+          <!-- 2. Ar condicionado -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_ac_title">Ar Condicionado</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_ac_desc">
+              Climatização individual regulável em todas as unidades para o seu bem-estar e conforto térmico.
+            </p>
+          </div>
+
+          <!-- 3. Restaurante -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2v20M18 2a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3M6 2v6a3 3 0 0 0 3 3v11M3 2v6M9 2v6"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_restaurant_title">Restaurante</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_restaurant_desc">
+              Restaurante 1576 com pequeno-almoço executivo, pratos tradicionais e brunch ao domingo.
+            </p>
+          </div>
+
+          <!-- 4. Receção 24h -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_reception_title">Receção 24h</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_reception_desc">
+              Atendimento personalizado, check-in e assistência contínua a qualquer hora do dia ou da noite.
+            </p>
+          </div>
+
+          <!-- 5. Estacionamento -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                <path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_parking_title">Estacionamento</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_parking_desc">
+              Parqueamento privativo e seguro no local para comodidade e facilidade de acesso.
+            </p>
+          </div>
+
+          <!-- 6. Serviço de quartos -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 18h18"></path>
+                <path d="M4 18a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="7" r="1"></circle>
+                <path d="M12 4v2"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_roomservice_title">Serviço de Quartos</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_roomservice_desc">
+              Refeições ligeiras, bebidas e pequenos-almoços entregues com discrição no seu quarto.
+            </p>
+          </div>
+
+          <!-- 7. Bar hotel -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8 22h8M12 15v7M19 3l-7 8-7-8h14z"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_bar_title">Bar Hotel</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_bar_desc">
+              Snack Bar descontraído para café de especialidade, refeições rápidas e carta de cocktails.
+            </p>
+          </div>
+
+          <!-- 8. Segurança 24h -->
+          <div class="amenity-card-item">
+            <div class="amenity-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="amenity-card-title" data-i18n="amenity_security_title">Segurança 24h</h3>
+            <p class="amenity-card-desc" data-i18n="amenity_security_desc">
+              Monitorização contínua e equipa de vigilância profissional para a sua total tranquilidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. TERROIR & DINING
+         ====================================================================== -->
+    <section class="section-padding" id="dining">
+      <div class="container dining-section-grid">
+        <div class="dining-media-cluster reveal-item">
+          <div class="dining-img-wrapper">
+            <img
+              src="/assets/images/dining.jpg"
+              alt="Restaurante 1576 no Hotel Loanda com ambiente intimista e mesas de madeira nobre"
+              class="dining-main-img"
+              referrerpolicy="no-referrer"
+            />
+            <div class="dining-venue-badge">
+              <span class="dining-badge-dot"></span>
+              <span data-i18n="dining_venue_tag">Restaurante 1576 · Luanda</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dining-narrative reveal-item">
+          <span class="eyebrow" data-i18n="dining_eyebrow">Gastronomia & Restaurante</span>
+          <h2 data-i18n="dining_title">Uma experiência para saborear.</h2>
+          <p class="lead-text" data-i18n="dining_intro" style="margin-top: 1rem; line-height: 1.75; color: var(--color-text-body);">
+            O nosso restaurante convida-o a descobrir uma experiência gastronómica que combina os sabores angolanos com a diversidade da cozinha internacional. Num ambiente acolhedor, cada refeição é uma oportunidade para desfrutar de boa comida, partilhar momentos e descobrir novos sabores.
+          </p>
+
+          <div class="dining-pillars-list">
+            <!-- Buffet & À La Carte -->
+            <div class="dining-pillar-item">
+              <div class="dining-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <div class="dining-pillar-content">
+                <h3 class="dining-pillar-title" data-i18n="dining_item1_title">Buffet & À La Carte</h3>
+                <p class="dining-pillar-desc" data-i18n="dining_item1_desc">
+                  Diferentes formas de desfrutar de cada refeição, com opções para diferentes gostos e momentos do dia.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pequeno-almoço, Almoço & Jantar -->
+            <div class="dining-pillar-item">
+              <div class="dining-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="dining-pillar-content">
+                <h3 class="dining-pillar-title" data-i18n="dining_item2_title">Pequeno-almoço, Almoço & Jantar</h3>
+                <p class="dining-pillar-desc" data-i18n="dining_item2_desc">
+                  Uma proposta gastronómica para começar o dia, fazer uma pausa ou terminar a noite à mesa.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hotel Bar -->
+            <div class="dining-pillar-item">
+              <div class="dining-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M8 22h8M12 15v7M19 3l-7 8-7-8h14z"></path>
+                </svg>
+              </div>
+              <div class="dining-pillar-content">
+                <h3 class="dining-pillar-title" data-i18n="dining_item3_title">Hotel Bar</h3>
+                <p class="dining-pillar-desc" data-i18n="dining_item3_desc">
+                  Um espaço para relaxar, desfrutar de uma bebida e partilhar bons momentos num ambiente acolhedor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dining-actions">
+            <a
+              href="https://wa.me/244942521179?text=Ol%C3%A1%2C%20gostaria%20de%20reservar%20uma%20mesa%20no%20Restaurante%201576%20do%20Hotel%20Loanda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-whatsapp"
+              id="dining-whatsapp-btn"
+              data-whatsapp-dining
+              aria-label="Reservar Mesa no Restaurante 1576 via WhatsApp (+244 942 521 179)"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.66 20.15 9.3 19.8 8.1 19.14L7.81 18.97L4.69 19.79L5.52 16.75L5.33 16.45C4.6 15.28 4.21 13.62 4.21 11.91C4.21 7.37 7.9 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.9 12.03 8.02 12.19C8.14 12.35 9.74 14.83 12.2 15.89C12.79 16.14 13.24 16.3 13.6 16.41C14.19 16.6 14.73 16.57 15.16 16.51C15.64 16.44 16.63 15.91 16.84 15.33C17.05 14.74 17.05 14.24 16.98 14.13C16.92 14.02 16.76 13.96 16.51 13.84C16.27 13.71 15.08 13.13 14.86 13.05C14.64 12.97 14.48 12.93 14.31 13.17C14.15 13.42 13.68 13.96 13.54 14.13C13.4 14.29 13.26 14.31 13.01 14.19C12.77 14.06 11.98 13.81 11.05 12.98C10.32 12.33 9.83 11.53 9.69 11.28C9.55 11.04 9.67 10.9 9.8 10.78C9.91 10.67 10.05 10.49 10.19 10.33C10.33 10.17 10.38 10.05 10.47 9.88C10.56 9.72 10.51 9.57 10.45 9.45C10.39 9.33 9.91 8.15 9.71 7.67C9.51 7.2 9.31 7.26 9.15 7.25C9 7.25 8.81 7.25 8.63 7.25L8.53 7.33Z"/>
+              </svg>
+              <span data-i18n="dining_btn">Reservar Mesa</span>
+            </a>
+            <a
+              href="https://wa.me/244942521179?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20carta%20do%20Restaurante%201576%20no%20Hotel%20Loanda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-link btn-link-whatsapp"
+              id="dining-menu-whatsapp-link"
+              data-whatsapp-dining-menu
+            >
+              <span data-i18n="dining_menu_link">Consultar Carta do Restaurante →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. EXCLUSIVE SUNDAY BRUNCH SECTION
+         ====================================================================== -->
+    <section class="section-padding brunch-section" id="brunch">
+      <div class="container brunch-section-grid">
+        <!-- Narrative Column (Left on desktop) -->
+        <div class="brunch-narrative reveal-item">
+          <span class="eyebrow" data-i18n="brunch_eyebrow">Tradição dos Domingos em Luanda</span>
+          <h2 data-i18n="brunch_title">Brunch de Domingo no Hotel Loanda</h2>
+
+          <p class="lead-text" data-i18n="brunch_desc" style="margin-top: 1.25rem; line-height: 1.8; color: var(--color-text-body); font-style: italic;">
+            Os domingos ganham outro sabor no Hotel Loanda. Reúna a família e os amigos à volta de uma mesa que celebra a diversidade gastronómica, com sabores da cozinha angolana e internacional, numa experiência pensada para partilhar, saborear e desfrutar sem pressa.
+          </p>
+
+          <!-- CTAs -->
+          <div class="brunch-actions" style="margin-top: 2rem;">
+            <a
+              href="https://wa.me/244942521179?text=Ol%C3%A1%2C%20gostaria%20de%20reservar%20uma%20mesa%20para%20o%20Brunch%20de%20Domingo%20no%20Hotel%20Loanda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-whatsapp"
+              id="brunch-whatsapp-btn"
+              data-whatsapp-brunch
+              aria-label="Reservar Mesa para o Brunch via WhatsApp (+244 942 521 179)"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.66 20.15 9.3 19.8 8.1 19.14L7.81 18.97L4.69 19.79L5.52 16.75L5.33 16.45C4.6 15.28 4.21 13.62 4.21 11.91C4.21 7.37 7.9 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.9 12.03 8.02 12.19C8.14 12.35 9.74 14.83 12.2 15.89C12.79 16.14 13.24 16.3 13.6 16.41C14.19 16.6 14.73 16.57 15.16 16.51C15.64 16.44 16.63 15.91 16.84 15.33C17.05 14.74 17.05 14.24 16.98 14.13C16.92 14.02 16.76 13.96 16.51 13.84C16.27 13.71 15.08 13.13 14.86 13.05C14.64 12.97 14.48 12.93 14.31 13.17C14.15 13.42 13.68 13.96 13.54 14.13C13.4 14.29 13.26 14.31 13.01 14.19C12.77 14.06 11.98 13.81 11.05 12.98C10.32 12.33 9.83 11.53 9.69 11.28C9.55 11.04 9.67 10.9 9.8 10.78C9.91 10.67 10.05 10.49 10.19 10.33C10.33 10.17 10.38 10.05 10.47 9.88C10.56 9.72 10.51 9.57 10.45 9.45C10.39 9.33 9.91 8.15 9.71 7.67C9.51 7.2 9.31 7.26 9.15 7.25C9 7.25 8.81 7.25 8.63 7.25L8.53 7.33Z"/>
+              </svg>
+              <span data-i18n="brunch_btn">Reservar Mesa para o Brunch</span>
+            </a>
+            <a
+              href="https://wa.me/244942521179?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20e%20fazer%20uma%20reserva%20de%20grupo%20para%20o%20Brunch%20de%20Domingo%20no%20Hotel%20Loanda."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-link btn-link-whatsapp"
+              id="brunch-group-whatsapp-link"
+              data-whatsapp-brunch-group
+            >
+              <span data-i18n="brunch_info_btn">Informações & Reservas de Grupo →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Media Column (Right on desktop) -->
+        <div class="brunch-media-cluster reveal-item">
+          <div class="brunch-img-wrapper">
+            <img
+              src="/assets/images/brunch.jpg"
+              alt="Brunch de Domingo no Hotel Loanda com mesa farta e sabores da cozinha angolana e internacional"
+              class="brunch-main-img"
+              referrerpolicy="no-referrer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. LOCATION & SURROUNDINGS
+         ====================================================================== -->
+    <section class="section-padding bg-alt" id="location">
+      <div class="container surroundings-grid">
+        <div class="reveal-item">
+          <span class="eyebrow" data-i18n="loc_eyebrow">Localização Privilegiada</span>
+          <h2 data-i18n="loc_title">Localização Estratégica e Serena</h2>
+          <p style="margin-top: 0.75rem; color: var(--color-text-body);" data-i18n="loc_subtitle">
+            Fácil acesso aos principais pontos da cidade e centros de negócios, mantendo o ambiente de refúgio e repouso.
+          </p>
+
+          <ul class="surroundings-trails-list">
+            <li class="trail-item">
+              <div class="trail-info">
+                <h4 data-i18n="loc_trail_1_title">Acesso Rápido a Centros de Negócios</h4>
+                <p data-i18n="loc_trail_1_desc">Principais vias de circulação e zonas comerciais</p>
+              </div>
+              <span class="trail-distance" data-i18n="loc_trail_1_dist">10 min</span>
+            </li>
+            <li class="trail-item">
+              <div class="trail-info">
+                <h4 data-i18n="loc_trail_2_title">Aeroporto Internacional</h4>
+                <p data-i18n="loc_trail_2_desc">Serviço de transfer disponível sob marcação</p>
+              </div>
+              <span class="trail-distance" data-i18n="loc_trail_2_dist">20 min</span>
+            </li>
+            <li class="trail-item">
+              <div class="trail-info">
+                <h4 data-i18n="loc_trail_3_title">Restaurantes e Pontos de Lazer</h4>
+                <p data-i18n="loc_trail_3_desc">Zona envolvente com opções culturais e de lazer</p>
+              </div>
+              <span class="trail-distance" data-i18n="loc_trail_3_dist">5-15 min</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="location-map-frame reveal-item">
+          <h3 style="font-size: 1.45rem;" data-i18n="loc_box_title">Visite o Hotel Loanda</h3>
+          <div class="address-block">
+            <p><strong data-i18n="loc_box_addr_label">Endereço:</strong></p>
+            <p style="color: var(--color-text-body);" data-i18n="loc_box_addr_val">
+              [Endereço do Hotel Loanda — Luanda, Angola]
+            </p>
+          </div>
+
+          <div style="border-top: 1px solid var(--color-border); padding-top: 1rem;">
+            <p><strong data-i18n="loc_box_transfer_label">Estacionamento & Transfer:</strong></p>
+            <p style="font-size: 0.875rem; color: var(--color-text-body); margin-top: 0.25rem;" data-i18n="loc_box_transfer_val">
+              Estacionamento privativo e seguro para hóspedes. Assistência de transfer para o aeroporto mediante reserva.
+            </p>
+          </div>
+
+          <button type="button" class="btn btn-secondary" style="width: 100%;" data-open-modal="reservation" data-i18n="loc_box_btn">
+            Pedir Informações de Chegada
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. RESERVATION CALL-TO-ACTION BANNER
+         ====================================================================== -->
+    <section class="section-padding" style="background-color: var(--color-text-main); color: var(--color-canvas); text-align: center;">
+      <div class="container reveal-item" style="max-width: 760px;">
+        <span class="eyebrow" style="color: rgba(249, 246, 240, 0.7);" data-i18n="cta_eyebrow">O Seu Refúgio de Conforto</span>
+        <h2 style="color: var(--color-canvas); margin-bottom: 1.25rem;" data-i18n="cta_title">
+          Reserve a Sua Estadia no Hotel Loanda
+        </h2>
+        <p style="font-size: 1.05rem; color: rgba(249, 246, 240, 0.8); line-height: 1.6; margin-bottom: 2rem;" data-i18n="cta_desc">
+          Descubra a combinação ideal entre sofisticação, comodidade e acolhimento caloroso. Garanta a sua tarifa com reserva directa.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="btn header-btn" data-open-modal="reservation" style="padding: 1rem 2.25rem; font-size: 0.875rem;" data-i18n="cta_book_btn">
+            Reservar Agora
+          </button>
+          <a href="#rooms" class="btn btn-secondary" style="color: var(--color-canvas); border-color: rgba(249, 246, 240, 0.4); padding: 1rem 2rem;" data-i18n="cta_compare_btn">
+            Ver Todos os Quartos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. FOOTER
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="container footer-top-grid">
+        <div class="footer-brand">
+          <h3>Hotel Loanda</h3>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            Hotel boutique de luxo rústico em Angola, combinando elegância contemporânea, conforto e calor humano.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_nav_title">Navegação</h4>
+          <ul class="footer-links-list">
+            <li><a href="#essence" data-i18n="nav_hotel">O Hotel</a></li>
+            <li><a href="#rooms" data-i18n="nav_rooms">Quartos & Suites</a></li>
+            <li><a href="#amenities" data-i18n="nav_amenities">Comodidades</a></li>
+            <li><a href="#dining" data-i18n="nav_dining">Gastronomia</a></li>
+            <li><a href="#brunch" data-i18n="nav_brunch">Brunch</a></li>
+            <li><a href="#location" data-i18n="nav_location">Localização</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_hours_title">Horários</h4>
+          <ul class="footer-links-list" style="color: rgba(249, 246, 240, 0.7);">
+            <li data-i18n="footer_checkin">Check-in: a partir das 14:00</li>
+            <li data-i18n="footer_checkout">Check-out: até às 12:00</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_contact_title">Contactos Directos</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:reservas@hotelloanda.com">reservas@hotelloanda.com</a></li>
+            <li><a href="https://wa.me/244942521179" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 500;">WhatsApp: +244 942 521 179</a></li>
+            <li><a href="tel:+244942521179">+244 942 521 179 (Chamadas)</a></li>
+            <li><span style="color: rgba(249, 246, 240, 0.65);">Reserva directa com garantia de melhor tarifa.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div data-i18n="footer_rights">
+          &copy; 2026 Hotel Loanda. Todos os direitos reservados. Rustic Soul & Modern Luxury.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: inherit;">Privacidade</a>
+          <a href="#" style="color: inherit;">Termos de Reserva</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================================
+         INTERACTIVE RESERVATION INQUIRY MODAL
+         ====================================================================== -->
+    <div class="reservation-modal-backdrop" id="reservation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+      <div class="reservation-modal-card">
+        <button type="button" class="modal-close-btn" data-close-modal="reservation" aria-label="Fechar janela de reserva">
+          &times;
+        </button>
+
+        <span class="eyebrow" style="margin-bottom: 0.25rem;" data-i18n="modal_eyebrow">Reserva Directa</span>
+        <h3 id="modal-heading" style="margin-bottom: 0.5rem; font-size: 1.85rem;" data-i18n="modal_title">
+          Reserve a Sua Estadia no Hotel Loanda
+        </h3>
+        <p style="font-size: 0.875rem; color: var(--color-text-body);" data-i18n="modal_desc">
+          Indique as suas datas e o quarto pretendido. A nossa equipa entrará em contacto para confirmar a disponibilidade.
+        </p>
+
+        <div class="form-submit-feedback" id="reservation-feedback" role="alert"></div>
+
+        <form id="reservation-form">
+          <div class="modal-form-grid">
+            <div class="form-group">
+              <label for="modal-checkin" class="form-label" data-i18n="modal_label_checkin">Data de Check-in</label>
+              <input type="date" id="modal-checkin" class="form-input" required />
+            </div>
+
+            <div class="form-group">
+              <label for="modal-checkout" class="form-label" data-i18n="modal_label_checkout">Data de Check-out</label>
+              <input type="date" id="modal-checkout" class="form-input" required />
+            </div>
+
+            <div class="form-group">
+              <label for="modal-guests" class="form-label" data-i18n="modal_label_guests">Número de Hóspedes</label>
+              <select id="modal-guests" class="form-input">
+                <option value="1 Guest" data-i18n="guest_1">1 Hóspede</option>
+                <option value="2 Guests" data-i18n="guest_2" selected>2 Hóspedes</option>
+                <option value="3 Guests" data-i18n="guest_3">3 Hóspedes</option>
+                <option value="4 Guests" data-i18n="guest_4">4 Hóspedes</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-room-type" class="form-label" data-i18n="modal_label_room">Quarto ou Serviço</label>
+              <select id="modal-room-type" class="form-input">
+                <option value="Executive">Executive (115 500 Kz - 128 500 Kz)</option>
+                <option value="Premium">Premium (118 800 Kz - 131 800 Kz)</option>
+                <option value="Premium Superior">Premium Superior (122 100 Kz - 135 100 Kz)</option>
+                <option value="Suite Executive Kitchenette">Suite Executive Kitchenette (165 000 Kz - 178 000 Kz)</option>
+                <option value="Suite Premium Kitchenette">Suite Premium Kitchenette (176 000 Kz - 189 000 Kz)</option>
+                <option value="Suite Master Kitchenette">Suite Master Kitchenette (187 000 Kz - 200 000 Kz)</option>
+                <option value="Restaurante 1576 — Reserva de Mesa">Restaurante 1576 — Reserva de Mesa</option>
+                <option value="Brunch de Domingo — Restaurante 1576">Brunch de Domingo — Restaurante 1576</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="modal-name" class="form-label" data-i18n="modal_label_name">Nome Completo</label>
+              <input type="text" id="modal-name" class="form-input" placeholder="Ex: João Silva" data-i18n-placeholder="modal_placeholder_name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="modal-email" class="form-label" data-i18n="modal_label_email">Endereço de E-mail</label>
+              <input type="email" id="modal-email" class="form-input" placeholder="Ex: joao@exemplo.com" data-i18n-placeholder="modal_placeholder_email" required />
+            </div>
+
+            <div class="form-group form-full-col">
+              <label for="modal-notes" class="form-label" data-i18n="modal_label_notes">Pedidos Especiais / Observações (Opcional)</label>
+              <textarea id="modal-notes" class="form-input" rows="3" placeholder="Hora prevista de chegada, transfer, preferências..." data-i18n-placeholder="modal_placeholder_notes"></textarea>
+            </div>
+
+            <div class="form-full-col" style="margin-top: 0.5rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;" data-i18n="modal_btn_submit">
+                Enviar Pedido de Reserva
+              </button>
+              <p style="font-size: 0.75rem; color: var(--color-text-light); text-align: center; margin-top: 0.75rem;" data-i18n="modal_notice">
+                Sem custos imediatos. Confirmação personalizada enviada pela recepção.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Pure Vanilla JS -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

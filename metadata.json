@@ -1,0 +1,6 @@
+{
+  "name": "Hotel Loanda",
+  "description": "Boutique rustic-luxury hotel website celebrating warmth, authentic materials, and understated hospitality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
