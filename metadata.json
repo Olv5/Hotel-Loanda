@@ -1,6 +1,0 @@
-{
-  "name": "Hotel Loanda",
-  "description": "Hotel Loanda em Luanda, Angola — O prazer de se sentir no lugar certo. Acolhimento natural, conforto nos detalhes, Restaurante 1576 e Brunch de Domingo.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
