@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel Loanda — Hotel Boutique de Luxo Rústico</title>
-    <meta name="description" content="Hotel Loanda é um hotel boutique de luxo rústico em Angola, combinando o calor dos materiais nobres, conforto e autêntica hospitalidade." />
-    <meta property="og:title" content="Hotel Loanda — Hotel Boutique de Luxo Rústico" />
-    <meta property="og:description" content="Onde a alma rústica encontra o luxo contemporâneo e o acolhimento caloroso." />
+    <title>Hotel Loanda — O prazer de se sentir em casa</title>
+    <meta name="description" content="Hotel Loanda em Luanda, Angola. O prazer de se sentir em casa — Longe da rotina, perto do que realmente importa. Restaurante 1576, Snack Bar e Brunch de Domingo." />
+    <meta property="og:title" content="Hotel Loanda — O prazer de se sentir em casa" />
+    <meta property="og:description" content="Longe da rotina, perto do que realmente importa. Descubra um espaço onde o acolhimento é natural, o conforto está em cada detalhe e Luanda ganha um significado mais pessoal." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -19,9 +19,13 @@
          ====================================================================== -->
     <header class="site-header" id="site-header">
       <div class="header-container">
-        <!-- Zone 1: Wordmark -->
-        <a href="#hero" class="brand-wordmark" aria-label="Hotel Loanda Página Inicial">
-          Hotel Loanda
+        <!-- Zone 1: Wordmark & Location Subtitle with Gold Bar -->
+        <a href="#hero" class="brand-block" aria-label="Hotel Loanda Página Inicial">
+          <span class="brand-bar" aria-hidden="true"></span>
+          <div class="brand-info">
+            <span class="brand-wordmark">HOTEL LOANDA</span>
+            <span class="brand-sub">HOTEL LOANDA · LUANDA, ANGOLA</span>
+          </div>
         </a>
 
         <!-- Zone 2: Navigation Links -->
@@ -38,14 +42,13 @@
 
         <!-- Zone 3: Direct Action & Language Switcher -->
         <div class="header-actions">
-          <!-- Language Toggle Button: PT / EN -->
           <div class="lang-switch" role="group" aria-label="Seleção de Idioma / Language Selector">
             <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true">PT</button>
             <span class="lang-sep">|</span>
             <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
           </div>
 
-          <button type="button" class="btn header-btn" data-open-modal="reservation" data-i18n="nav_book_btn">
+          <button type="button" class="btn btn-header-reserve" data-open-modal="reservation" data-i18n="nav_book_btn">
             Reservar Estadia
           </button>
 
@@ -61,9 +64,15 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu de Navegação">
       <div class="mobile-drawer-header">
-        <a href="#hero" class="brand-wordmark mobile-nav-link" style="color: var(--color-text-main); font-size: 1.4rem;">Hotel Loanda</a>
+        <a href="#hero" class="brand-block mobile-nav-link" aria-label="Hotel Loanda Página Inicial">
+          <span class="brand-bar" aria-hidden="true"></span>
+          <div class="brand-info">
+            <span class="brand-wordmark">HOTEL LOANDA</span>
+            <span class="brand-sub">LUANDA, ANGOLA</span>
+          </div>
+        </a>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <div class="lang-switch" style="border-color: var(--color-border); background: var(--color-surface-card);">
+          <div class="lang-switch" role="group" aria-label="Seleção de Idioma">
             <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true">PT</button>
             <span class="lang-sep">|</span>
             <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -88,79 +97,155 @@
 
       <div class="mobile-drawer-footer">
         <p><strong>Hotel Loanda</strong></p>
-        <p style="font-size: 0.8125rem; color: var(--color-text-light);">Rustic Soul · Modern Luxury</p>
-        <button type="button" class="btn btn-primary" style="margin-top: 1.25rem; width: 100%;" data-open-modal="reservation" data-close-drawer data-i18n="nav_book_btn">
+        <p style="font-size: 0.8125rem; color: rgba(250, 247, 240, 0.7);">Hospitalidade Autêntica · Luanda, Angola</p>
+        <button type="button" class="btn btn-header-reserve btn-drawer-reserve" data-open-modal="reservation" data-close-drawer data-i18n="nav_book_btn">
           Reservar Estadia
         </button>
       </div>
     </div>
 
     <!-- ======================================================================
-         1. HERO SECTION
+         1. HERO SECTION — EDITORIAL LUXURY BOUTIQUE HOTEL DESIGN
          ====================================================================== -->
     <section class="hero-section" id="hero">
-      <div class="hero-media-wrapper">
+      <!-- Full-Bleed Panoramic Visual: Authentic Hotel Loanda Real Façade -->
+      <div class="hero-media-wrapper" aria-hidden="true">
         <img
           src="/assets/images/hero2.jpg"
-          alt="Fachada exterior do Hotel Loanda em Luanda, Angola"
+          alt="Fachada autêntica do Hotel Loanda com Restaurante 1576 e Snack Bar em Luanda, Angola"
           class="hero-image"
           referrerpolicy="no-referrer"
         />
         <div class="hero-scrim"></div>
       </div>
 
-      <div class="container hero-content">
-        <span class="hero-eyebrow">
-          <span data-i18n="hero_eyebrow_1">Santuário Boutique</span>
-          <span class="meta-sep">·</span>
-          <span data-i18n="hero_eyebrow_2">Luxo Rústico</span>
-          <span class="meta-sep">·</span>
-          <span data-i18n="hero_eyebrow_3">Hospitalidade</span>
-        </span>
-        <h1 class="hero-title" data-i18n="hero_title">
-          Onde a Alma Rústica Encontra o Luxo Contemporâneo.
-        </h1>
-        <p class="hero-description" data-i18n="hero_desc">
-          Um refúgio intimista em Angola, combinando o calor dos materiais nobres, conforto de excelência e a mais autêntica hospitalidade.
-        </p>
-      </div>
+      <!-- Hero Content Canvas -->
+      <div class="container hero-viewport-stage">
+        <!-- Main Hero Content (Left-Aligned, Upper-Middle Area) -->
+        <div class="hero-editorial-wrap reveal-item">
+          <header class="hero-content-column">
+            <div class="hero-eyebrow-container">
+              <span class="hero-eyebrow-line" aria-hidden="true"></span>
+              <span class="hero-eyebrow-label" data-i18n="hero_eyebrow">A SUA ESTADIA EM LUANDA</span>
+            </div>
 
-      <!-- Integrated Quick Reservation Bar -->
-      <div class="container booking-quickbar-container">
-        <form class="booking-quickbar" id="quickbar-form">
-          <div class="booking-field">
-            <label for="qb-checkin" class="booking-field-label" data-i18n="qb_checkin">Check-in</label>
-            <input type="date" id="qb-checkin" class="booking-field-control" required />
-          </div>
-          <div class="booking-field">
-            <label for="qb-checkout" class="booking-field-label" data-i18n="qb_checkout">Check-out</label>
-            <input type="date" id="qb-checkout" class="booking-field-control" required />
-          </div>
-          <div class="booking-field">
-            <label for="qb-guests" class="booking-field-label" data-i18n="qb_guests">Hóspedes</label>
-            <select id="qb-guests" class="booking-field-control">
-              <option value="1 Guest" data-i18n="guest_1">1 Hóspede</option>
-              <option value="2 Guests" data-i18n="guest_2" selected>2 Hóspedes</option>
-              <option value="3 Guests" data-i18n="guest_3">3 Hóspedes</option>
-              <option value="4 Guests" data-i18n="guest_4">4 Hóspedes</option>
-            </select>
-          </div>
-          <div class="booking-field">
-            <label for="qb-room" class="booking-field-label" data-i18n="qb_room_type">Tipo de Quarto</label>
-            <select id="qb-room" class="booking-field-control">
-              <option value="All Rooms" data-i18n="qb_all_rooms">Qualquer Quarto</option>
-              <option value="Executive">Executive</option>
-              <option value="Premium">Premium</option>
-              <option value="Premium Superior">Premium Superior</option>
-              <option value="Suite Executive Kitchenette">Suite Executive Kitchenette</option>
-              <option value="Suite Premium Kitchenette">Suite Premium Kitchenette</option>
-              <option value="Suite Master Kitchenette">Suite Master Kitchenette</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" data-i18n="qb_btn">
-            Verificar Disponibilidade
-          </button>
-        </form>
+            <h1 class="hero-title" data-i18n-html="hero_title">
+              O prazer de se sentir<br>em casa.
+            </h1>
+
+            <p class="hero-description" data-i18n="hero_desc">
+              Longe da rotina, perto do que realmente importa. Descubra um espaço onde o acolhimento é natural, o conforto está em cada detalhe e Luanda ganha um significado mais pessoal.
+            </p>
+
+            <a href="#essence" class="hero-discover-link" data-i18n-html="hero_link">
+              <span>Descubra o Hotel</span>
+              <span class="hero-discover-arrow" aria-hidden="true">↗</span>
+            </a>
+          </header>
+        </div>
+
+        <!-- Prominent Horizontal Booking Panel (Centered Bottom) -->
+        <div class="hero-booking-zone">
+          <form class="booking-quickbar" id="quickbar-form" aria-label="Reserva Rápida de Acomodação">
+            <!-- Field 1: Check-in -->
+            <div class="booking-field-group">
+              <svg class="booking-field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb07c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <circle cx="8" cy="15" r="0.8" fill="#cbb07c"></circle>
+                <circle cx="12" cy="15" r="0.8" fill="#cbb07c"></circle>
+                <circle cx="16" cy="15" r="0.8" fill="#cbb07c"></circle>
+              </svg>
+              <div class="booking-field-body">
+                <label for="qb-checkin" class="booking-field-label" data-i18n="qb_checkin">CHECK-IN</label>
+                <div class="booking-field-control-wrap">
+                  <input type="date" id="qb-checkin" class="booking-field-control booking-date-input" required value="2026-10-13" />
+                  <span class="booking-date-display" id="qb-checkin-display">13 OUT 2026</span>
+                  <span class="booking-field-chevron" aria-hidden="true">⌵</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-divider" aria-hidden="true"></div>
+
+            <!-- Field 2: Check-out -->
+            <div class="booking-field-group">
+              <svg class="booking-field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb07c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <circle cx="8" cy="15" r="0.8" fill="#cbb07c"></circle>
+                <circle cx="12" cy="15" r="0.8" fill="#cbb07c"></circle>
+                <circle cx="16" cy="15" r="0.8" fill="#cbb07c"></circle>
+              </svg>
+              <div class="booking-field-body">
+                <label for="qb-checkout" class="booking-field-label" data-i18n="qb_checkout">CHECK-OUT</label>
+                <div class="booking-field-control-wrap">
+                  <input type="date" id="qb-checkout" class="booking-field-control booking-date-input" required value="2026-10-16" />
+                  <span class="booking-date-display" id="qb-checkout-display">16 OUT 2026</span>
+                  <span class="booking-field-chevron" aria-hidden="true">⌵</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-divider" aria-hidden="true"></div>
+
+            <!-- Field 3: Hóspedes -->
+            <div class="booking-field-group">
+              <svg class="booking-field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb07c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <div class="booking-field-body">
+                <label for="qb-guests" class="booking-field-label" data-i18n="qb_guests">HÓSPEDES</label>
+                <div class="booking-field-control-wrap">
+                  <select id="qb-guests" class="booking-field-control">
+                    <option value="1 Guest" data-i18n="guest_1">1 hóspede</option>
+                    <option value="2 Guests" data-i18n="guest_2" selected>2 hóspedes</option>
+                    <option value="3 Guests" data-i18n="guest_3">3 hóspedes</option>
+                    <option value="4 Guests" data-i18n="guest_4">4 hóspedes</option>
+                  </select>
+                  <span class="booking-field-chevron" aria-hidden="true">⌵</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-divider" aria-hidden="true"></div>
+
+            <!-- Field 4: Tipo de Quarto -->
+            <div class="booking-field-group">
+              <svg class="booking-field-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbb07c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 4v16"></path>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                <path d="M2 17h20"></path>
+                <path d="M6 8v9"></path>
+              </svg>
+              <div class="booking-field-body">
+                <label for="qb-room" class="booking-field-label" data-i18n="qb_room_type">TIPO DE QUARTO</label>
+                <div class="booking-field-control-wrap">
+                  <select id="qb-room" class="booking-field-control">
+                    <option value="All Rooms" data-i18n="qb_all_rooms" selected>Qualquer quarto</option>
+                    <option value="Executive">Executive</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Premium Superior">Premium Superior</option>
+                    <option value="Suite Executive Kitchenette">Suite Executive Kitchenette</option>
+                    <option value="Suite Premium Kitchenette">Suite Premium Kitchenette</option>
+                    <option value="Suite Master Kitchenette">Suite Master Kitchenette</option>
+                  </select>
+                  <span class="booking-field-chevron" aria-hidden="true">⌵</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Availability Button -->
+            <button type="submit" class="btn btn-quickbar-availability" data-i18n="qb_btn">
+              VER DISPONIBILIDADE →
+            </button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -1064,6 +1149,6 @@
     </div>
 
     <!-- Pure Vanilla JS -->
-    <script src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

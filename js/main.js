@@ -16,23 +16,22 @@ const TRANSLATIONS = {
     nav_book_btn: 'Reservar Estadia',
 
     // Hero
-    hero_eyebrow_1: 'Santuário Boutique',
-    hero_eyebrow_2: 'Luxo Rústico',
-    hero_eyebrow_3: 'Hospitalidade',
-    hero_title: 'Onde a Alma Rústica Encontra o Luxo Contemporâneo.',
-    hero_desc: 'Um refúgio intimista em Angola, combinando o calor dos materiais nobres, conforto de excelência e a mais autêntica hospitalidade.',
+    hero_eyebrow: 'A SUA ESTADIA EM LUANDA',
+    hero_title: 'O prazer de se sentir<br>em casa.',
+    hero_desc: 'Longe da rotina, perto do que realmente importa. Descubra um espaço onde o acolhimento é natural, o conforto está em cada detalhe e Luanda ganha um significado mais pessoal.',
+    hero_link: '<span>Descubra o Hotel</span> <span class="hero-discover-arrow" aria-hidden="true">↗</span>',
 
     // Quickbar
-    qb_checkin: 'Check-in',
-    qb_checkout: 'Check-out',
-    qb_guests: 'Hóspedes',
-    qb_room_type: 'Tipo de Quarto',
-    qb_all_rooms: 'Qualquer Quarto',
-    qb_btn: 'Verificar Disponibilidade',
-    guest_1: '1 Hóspede',
-    guest_2: '2 Hóspedes',
-    guest_3: '3 Hóspedes',
-    guest_4: '4 Hóspedes',
+    qb_checkin: 'CHECK-IN',
+    qb_checkout: 'CHECK-OUT',
+    qb_guests: 'HÓSPEDES',
+    qb_room_type: 'TIPO DE QUARTO',
+    qb_all_rooms: 'Qualquer quarto',
+    qb_btn: 'VER DISPONIBILIDADE →',
+    guest_1: '1 hóspede',
+    guest_2: '2 hóspedes',
+    guest_3: '3 hóspedes',
+    guest_4: '4 hóspedes',
 
     // The Essence
     essence_eyebrow: 'Hospitalidade Genuína',
@@ -199,19 +198,18 @@ const TRANSLATIONS = {
     nav_book_btn: 'Book Your Stay',
 
     // Hero
-    hero_eyebrow_1: 'Boutique Sanctuary',
-    hero_eyebrow_2: 'Rustic Luxury',
-    hero_eyebrow_3: 'Hospitality',
-    hero_title: 'Where Rustic Soul Meets Understated Luxury.',
-    hero_desc: 'An intimate sanctuary in Angola, blending natural noble materials, superior comfort, and authentic warm hospitality.',
+    hero_eyebrow: 'YOUR STAY IN LUANDA',
+    hero_title: 'The pleasure of feeling<br>at home.',
+    hero_desc: 'Far from routine, close to what truly matters. Discover a space where warmth comes naturally, comfort lives in every detail, and Luanda takes on a more personal meaning.',
+    hero_link: '<span>Discover the Hotel</span> <span class="hero-discover-arrow" aria-hidden="true">↗</span>',
 
     // Quickbar
-    qb_checkin: 'Check-in',
-    qb_checkout: 'Check-out',
-    qb_guests: 'Guests',
-    qb_room_type: 'Room Type',
-    qb_all_rooms: 'Any Room',
-    qb_btn: 'Check Availability',
+    qb_checkin: 'CHECK-IN',
+    qb_checkout: 'CHECK-OUT',
+    qb_guests: 'GUESTS',
+    qb_room_type: 'ROOM TYPE',
+    qb_all_rooms: 'Any room',
+    qb_btn: 'CHECK AVAILABILITY →',
     guest_1: '1 Guest',
     guest_2: '2 Guests',
     guest_3: '3 Guests',
@@ -436,9 +434,9 @@ function setLanguage(lang) {
 
   // Update document title
   if (lang === 'pt') {
-    document.title = 'Hotel Loanda — Hotel Boutique de Luxo Rústico';
+    document.title = 'Hotel Loanda — O prazer de se sentir em casa';
   } else {
-    document.title = 'Hotel Loanda — Rustic Luxury Boutique Hotel';
+    document.title = 'Hotel Loanda — The pleasure of feeling at home';
   }
 
   // Update WhatsApp direct links based on active language
@@ -478,6 +476,8 @@ function setLanguage(lang) {
       waBrunchGroup.href = 'https://wa.me/244942521179?text=' + encodeURIComponent('Olá, gostaria de informações e fazer uma reserva de grupo para o Brunch de Domingo no Hotel Loanda.');
     }
   }
+
+  syncDateDisplays();
 }
 
 function initLanguageSwitcher() {
@@ -820,6 +820,41 @@ function initDateDefaults() {
   if (qbOut && !qbOut.value) qbOut.value = futureStr;
   if (modalIn && !modalIn.value) modalIn.value = todayStr;
   if (modalOut && !modalOut.value) modalOut.value = futureStr;
+
+  if (qbIn) {
+    qbIn.addEventListener('input', syncDateDisplays);
+    qbIn.addEventListener('change', syncDateDisplays);
+  }
+  if (qbOut) {
+    qbOut.addEventListener('input', syncDateDisplays);
+    qbOut.addEventListener('change', syncDateDisplays);
+  }
+
+  syncDateDisplays();
+}
+
+function syncDateDisplays() {
+  const monthsPt = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
+  const monthsEn = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+  const formatDisplay = (isoStr) => {
+    if (!isoStr) return '';
+    const parts = isoStr.split('-');
+    if (parts.length !== 3) return isoStr;
+    const year = parts[0];
+    const monthIndex = parseInt(parts[1], 10) - 1;
+    const day = parts[2];
+    const mStr = (currentLang === 'pt' ? monthsPt : monthsEn)[monthIndex] || parts[1];
+    return `${day} ${mStr} ${year}`;
+  };
+
+  const qbIn = document.getElementById('qb-checkin');
+  const qbOut = document.getElementById('qb-checkout');
+  const dispIn = document.getElementById('qb-checkin-display');
+  const dispOut = document.getElementById('qb-checkout-display');
+
+  if (dispIn && qbIn) dispIn.textContent = formatDisplay(qbIn.value);
+  if (dispOut && qbOut) dispOut.textContent = formatDisplay(qbOut.value);
 }
 
 function escapeHtml(str) {
